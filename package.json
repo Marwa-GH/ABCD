@@ -7,14 +7,13 @@
     "node": "14.x",
     "npm": "7.x"
   },
-  "scripts": {
-    "build":"cd frontend && npm run build",
+ "scripts": {
+    "build": "cd frontend && npm run build",
     "install-frontend": "cd frontend && npm install",
-    "start": "nodemon server.js",
-    "frontend":"cd frontend && npm start",
-    "dev": "concurrently \"npm run front\" \"npm run back\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prexfix frontend"
-    
+    "start": "node server.js",
+    "frontend": "cd frontend && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run frontend\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
   "keywords": [],
   "author": "",
